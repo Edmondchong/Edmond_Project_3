@@ -8,7 +8,7 @@
 
 • A transfer learning approach using ResNet18, which boosts performance with pretrained features.
 
-• Explainable AI (Grad-CAM) to visualize important regions in MRI scans.
+• Explainable AI to visualize important regions in MRI scans.
 
 Tech Stack:
 1. Python

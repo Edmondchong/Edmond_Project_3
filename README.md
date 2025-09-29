@@ -1,4 +1,3 @@
-# ⚠️NOTE⚠️
 ### ⚠ This repository contains a **DEMO version only**.  
 ### ⚠ The FULL CODE is kept PRIVATE and will be shared Upon Recruiter Request to prevent unauthorized copying.  
 

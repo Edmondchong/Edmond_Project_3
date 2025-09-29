@@ -1,6 +1,6 @@
 # ⚠️⚠️⚠️NOTE⚠️⚠️⚠️
 ### o This repository contains a **DEMO version only**.  
-### o The *FULL CODE* is kept **PRIVATE** and will be shared **Upon Recruiter Request** to prevent unauthorized copying.  
+### o The FULL CODE is kept PRIVATE and will be shared Upon Recruiter Request to prevent unauthorized copying.  
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

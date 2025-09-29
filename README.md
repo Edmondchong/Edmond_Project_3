@@ -1,5 +1,5 @@
 ### ⚠ This repository contains a **DEMO version only**.  
-### ⚠ The ''full code'' is kept 'private' and will be shared 'upon recruiter request' to prevent unauthorized copying.  
+### ⚠ The "Full Code" is kept "private" and will be shared "upon recruiter request" to prevent unauthorized copying.  
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -1,7 +1,7 @@
 
 ### ⚠️ This repository contains a "Demo" version only.  
 
-### ⚠️The "Complete Project" — with full training pipelines (k-fold cross-validation, evaluation metrics, deployment and more) is KEPT PRIVATE to prevent unauthorized copying on the **open internet**.  
+### ⚠️The "Complete Project" — with full training pipelines (k-fold cross-validation, evaluation metrics, deployment and more) is KEPT PRIVATE to prevent unauthorized copying on the Open Internet.  
 
 ### 🤝 Full access can be HAPPILY SHARED 'Upon Recruiter Request' to showcase my Full-Stack AI & LLM skills.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

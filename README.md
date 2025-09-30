@@ -1,6 +1,10 @@
-### ⚠ This repository contains a **DEMO version only**.  
-### ⚠ The "Complete Project" and "Full Deployment" is kept "private" and will be shared "upon recruiter request" to prevent unauthorized copying.  
 
+### ⚠️ This repository contains a **demo version only**.  
+
+### ⚠️The "Complete Project" — including full training pipelines (e.g., k-fold cross-validation, evaluation metrics, and full deployment setup) — is kept ""Private" to prevent unauthorized copying.  
+
+### ⚠️ I will be more than happy to provide **full access upon recruiter request**.  
+Thank you for your kind understanding.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 • This project develops a deep learning model to classify brain MRI scans into tumor vs. non-tumor categories. It demonstrates how AI can support early detection in medical imaging by combining:
 

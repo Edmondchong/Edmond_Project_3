@@ -1,24 +1,49 @@
 import streamlit as st
-import requests
+import torch
+import torch.nn as nn
+from torchvision import models, transforms
+from PIL import Image
 
+# --- Device Setup ---
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+# --- Model Definition ---
+class BrainTumorNet(nn.Module):
+    def __init__(self, num_classes=4):
+        super().__init__()
+        self.model = models.resnet18(pretrained=False)
+        in_features = self.model.fc.in_features
+        self.model.fc = nn.Linear(in_features, num_classes)
+
+    def forward(self, x):
+        return self.model(x)
+
+# Load model
+model = BrainTumorNet(num_classes=4).to(device)
+model.load_state_dict(torch.load("brain_tumor_resnet18.pth", map_location=device))
+model.eval()
+
+# Image transforms
+transform = transforms.Compose([
+    transforms.Resize((224,224)),
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.485,0.456,0.406], std=[0.229,0.224,0.225])
+])
+
+# --- Streamlit App ---
 st.title("🧠 Edmond Chong's Brain MRI Tumor Classifier")
 
-# File uploader
-uploaded_file = st.file_uploader("Upload a Brain MRI image", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("Upload a Brain MRI image", type=["jpg","png","jpeg"])
 
-if uploaded_file is not None:
-    # Display the uploaded image
-    st.image(uploaded_file, caption="Uploaded MRI Image", use_container_width=80)
+if uploaded_file:
+    image = Image.open(uploaded_file).convert("RGB")
+    st.image(image, caption="Uploaded Image", use_container_width=True)
 
-    if st.button("Predict Tumor Type"):
-        # Send file to FastAPI backend
-        files = {"file": uploaded_file.getvalue()}
-        response = requests.post("http://127.0.0.1:8000/predict", files=files)
+    img_tensor = transform(image).unsqueeze(0).to(device)
 
-        if response.status_code == 200:
-            result = response.json()
-            st.subheader("Prediction Result")
-            st.write(f"Tumor Type: **{result['tumor_type']}**")
-            st.write(f"Confidence: **{result['confidence']:.2f}**")
-        else:
-            st.error("Error: Could not get prediction. Please check the API.")
+    with torch.no_grad():
+        outputs = model(img_tensor)
+        _, pred = torch.max(outputs, 1)
+
+    labels = ["glioma", "meningioma", "pituitary", "no tumor"]
+    st.success(f"Prediction: **{labels[pred.item()]}**")

@@ -1,5 +1,5 @@
 
-### ⚠️ This repository contains a **demo version only**.  
+### ⚠️ This repository contains a "Demo" version only.  
 
 ### ⚠️The "Complete Project" — including full training pipelines (e.g., k-fold cross-validation, evaluation metrics, and full deployment setup) — is kept ""Private" to prevent unauthorized copying.  
 

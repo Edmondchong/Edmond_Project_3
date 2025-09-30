@@ -3,7 +3,7 @@
 
 ### ⚠️The "Complete Project" — with full training pipelines (k-fold cross-validation, evaluation metrics, deployment and more) is KEPT PRIVATE to prevent unauthorized copying on the **open internet**.  
 
-### 🤝 Full access can be HAPPILY SHARED "Upon Recruiter Request"** to showcase my Full-Stack AI & LLM skills.
+### 🤝 Full access can be HAPPILY SHARED 'Upon Recruiter Request' to showcase my Full-Stack AI & LLM skills.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 • This project develops a deep learning model to classify brain MRI scans into tumor vs. non-tumor categories. It demonstrates how AI can support early detection in medical imaging by combining:
 

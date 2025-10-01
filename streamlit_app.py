@@ -43,6 +43,7 @@ model = load_model()
 # -----------------------------
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
+    transforms.Lambda(lambda img: img.convert("RGB")),  # ensure RGB (handles grayscale MRIs)
     transforms.ToTensor(),
     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))  # must match training
 ])
@@ -53,24 +54,29 @@ transform = transforms.Compose([
 uploaded_file = st.file_uploader("Upload a Brain MRI image", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
-    # Show uploaded image
-    image = Image.open(uploaded_file).convert("RGB")
-    st.image(image, caption="Uploaded MRI Image", use_column_width=150)
+    try:
+        # Open and display the uploaded image
+        image = Image.open(uploaded_file)
+        st.image(image, caption="Uploaded MRI Image", use_column_width=True)
 
-    if st.button("Predict Tumor Type"):
-        # Preprocess
-        img_tensor = transform(image).unsqueeze(0)
+        if st.button("Predict Tumor Type"):
+            with st.spinner("Predicting... ⏳"):
+                # Preprocess
+                img_tensor = transform(image).unsqueeze(0)
 
-        # Inference
-        with torch.no_grad():
-            outputs = model(img_tensor)
-            probs = torch.softmax(outputs, dim=1)
-            conf, pred_class = torch.max(probs, 1)
+                # Inference
+                with torch.no_grad():
+                    outputs = model(img_tensor)
+                    probs = torch.softmax(outputs, dim=1)
+                    conf, pred_class = torch.max(probs, 1)
 
-        # Classes (must match training dataset order)
-        classes = ["glioma", "meningioma", "pituitary", "no tumor"]
+                # Classes (must match training dataset order)
+                classes = ["glioma", "meningioma", "pituitary", "no tumor"]
 
-        # Show result
-        st.subheader("Prediction Result")
-        st.write(f"Tumor Type: **{classes[pred_class.item()]}**")
-        st.write(f"Confidence: **{conf.item():.2f}**")
+                # Show result
+                st.subheader("Prediction Result")
+                st.write(f"Tumor Type: **{classes[pred_class.item()]}**")
+                st.write(f"Confidence: **{conf.item():.2f}**")
+
+    except Exception as e:
+        st.error(f"Error processing image: {e}")

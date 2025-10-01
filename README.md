@@ -1,9 +1,7 @@
 
-# 🚨 Edmond’s Project Demo 3
+### ⚠️ DEMO (Simplified version)
 
-#### ⚠️ DEMO (Simplified version)
-
-#### ⚠️The "Complete Project" – with full training pipelines (k-fold, eval metrics & more) is KEPT PRIVATE to prevent unauthorized copying on the OPEN INTERNET.  
+### ⚠️The "Complete Project" – with full training pipelines (k-fold, eval metrics & more) is KEPT PRIVATE to prevent unauthorized copying on the OPEN INTERNET.  
 
 ### 🤝 Full access can be HAPPILY SHARED 'Upon Recruiter Request' to showcase my Full-Stack AI & LLM skills.
 

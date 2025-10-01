@@ -10,23 +10,41 @@ from PIL import Image
 st.title("🧠 Edmond Chong's Brain MRI Tumor Classifier")
 
 # -----------------------------
+# Define Model (same as training)
+# -----------------------------
+class BrainTumorNet(nn.Module):
+    def __init__(self, num_classes=4):
+        super().__init__()
+        self.base_model = models.resnet18(pretrained=True)
+        # Freeze earlier layers (like training)
+        for param in self.base_model.parameters():
+            param.requires_grad = False
+        # Replace the final layer
+        in_features = self.base_model.fc.in_features
+        self.base_model.fc = nn.Linear(in_features, num_classes)
+        
+    def forward(self, x):
+        return self.base_model(x)
+
+# -----------------------------
 # Load Model
 # -----------------------------
 @st.cache_resource
 def load_model():
-    model = models.resnet18(pretrained=False)
-    in_features = model.fc.in_features
-    model.fc = nn.Linear(in_features, 4)  # 4 classes
+    model = BrainTumorNet(num_classes=4)
     model.load_state_dict(torch.load("brain_tumor_resnet18.pth", map_location="cpu"))
     model.eval()
     return model
 
 model = load_model()
 
-# Define transforms
+# -----------------------------
+# Define Transforms (same as training)
+# -----------------------------
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
+    transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))  # must match training
 ])
 
 # -----------------------------
@@ -49,7 +67,7 @@ if uploaded_file is not None:
             probs = torch.softmax(outputs, dim=1)
             conf, pred_class = torch.max(probs, 1)
 
-        # Classes (must match your training order)
+        # Classes (must match training dataset order)
         classes = ["glioma", "meningioma", "pituitary", "no tumor"]
 
         # Show result

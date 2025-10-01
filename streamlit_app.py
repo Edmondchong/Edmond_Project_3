@@ -10,11 +10,6 @@ from PIL import Image
 st.title("🧠 Edmond Chong's Brain MRI Tumor Classifier")
 
 # -----------------------------
-# Device Setup
-# -----------------------------
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-# -----------------------------
 # Load Model
 # -----------------------------
 @st.cache_resource
@@ -22,8 +17,7 @@ def load_model():
     model = models.resnet18(pretrained=False)
     in_features = model.fc.in_features
     model.fc = nn.Linear(in_features, 4)  # 4 classes
-    model.load_state_dict(torch.load("brain_tumor_resnet18.pth", map_location=device))
-    model.to(device)
+    model.load_state_dict(torch.load("brain_tumor_resnet18.pth", map_location="cpu"))
     model.eval()
     return model
 
@@ -47,7 +41,7 @@ if uploaded_file is not None:
 
     if st.button("Predict Tumor Type"):
         # Preprocess
-        img_tensor = transform(image).unsqueeze(0).to(device)
+        img_tensor = transform(image).unsqueeze(0)
 
         # Inference
         with torch.no_grad():

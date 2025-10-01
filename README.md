@@ -1,7 +1,7 @@
 
 # 🚨 Edmond’s Project Demo 3
 
-⚠️ **Demo Version Only**  
+### ⚠️ DEMO version only  
 
 ### ⚠️The "Complete Project" — with full training pipelines (k-fold cross-validation, evaluation metrics & more) is KEPT PRIVATE to prevent unauthorized copying on the OPEN INTERNET.  
 

@@ -3,8 +3,12 @@ import torch
 import torch.nn as nn
 from torchvision import models, transforms
 from PIL import Image
+from pathlib import Path
+import requests
+
 
 st.title("🧠 Edmond Chong's Brain MRI Tumor Classifier")
+
 
 class BrainTumorNet(nn.Module):
     def __init__(self, num_classes=4):
@@ -18,21 +22,36 @@ class BrainTumorNet(nn.Module):
     def forward(self, x):
         return self.base_model(x)
 
+
+
+MODEL_PATH = Path("brain_tumor_resnet18.pth")
+
 @st.cache_resource
 def load_model():
+    if not MODEL_PATH.exists():
+
+        headers = {"Authorization": f"Bearer {st.secrets['HF_TOKEN']}"}
+        url = st.secrets["MODEL_URL"]
+        r = requests.get(url, headers=headers)
+        r.raise_for_status()  
+        with open(MODEL_PATH, "wb") as f:
+            f.write(r.content)
+
     model = BrainTumorNet(num_classes=4)
-    model.load_state_dict(torch.load("brain_tumor_resnet18.pth", map_location="cpu"))
+    model.load_state_dict(torch.load(MODEL_PATH, map_location="cpu"))
     model.eval()
     return model
 
 model = load_model()
 
+
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
-    transforms.Lambda(lambda img: img.convert("RGB")), 
+    transforms.Lambda(lambda img: img.convert("RGB")),  # ensure RGB
     transforms.ToTensor(),
     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))  
 ])
+
 
 uploaded_file = st.file_uploader("Upload a Brain MRI image", type=["jpg", "jpeg", "png"])
 

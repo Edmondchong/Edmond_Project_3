@@ -4,22 +4,52 @@
 ### ⚠️The "Complete Project" — with full training pipelines (k-fold cross-validation, evaluation metrics & more) is KEPT PRIVATE to prevent unauthorized copying on the OPEN INTERNET.  
 
 ### 🤝 Full access can be HAPPILY SHARED 'Upon Recruiter Request' to showcase my Full-Stack AI & LLM skills.
+
+### 👉 Try the live demo here: https://edmondsproject3-rosebupmvbyfrwxz5u2dxk.streamlit.app/
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-• This project develops a deep learning model to classify brain MRI scans into tumor vs. non-tumor categories. It demonstrates how AI can support early detection in medical imaging by combining:
+📖 Project Overview
 
-• A custom-built Convolutional Neural Network (CNN) trained from scratch.
+This project demonstrates how AI can support early tumor detection in medical imaging by classifying brain MRI scans into multiple tumor categories vs. non-tumor. It combines both deep learning and explainable AI techniques.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔬 Key Approaches
 
-• A transfer learning approach using ResNet18, which boosts performance with pretrained features.
+Custom CNN: Built a convolutional neural network from scratch to establish baseline performance.
 
-• Explainable AI to visualize important regions in MRI scans.
+Transfer Learning with ResNet18: Leveraged pretrained features to improve accuracy and reduce training time.
 
-Tech Stack:
-1. Python
-2. Pytorch (deep learning framework)
-3. Torchvision 
-4. scikit-learn 
-5. Matplotlib (visualizations)
-6. XAI
+Explainable AI (XAI): Visualized salient regions of MRI scans to enhance interpretability and trust.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+⚙️ Tech Stack
+
+Python
+
+PyTorch / Torchvision
+
+scikit-learn
+
+Matplotlib / Seaborn
+
+XAI Libraries (Grad-CAM, etc.)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+✨ Features
+
+Built and compared custom CNN vs. transfer learning ResNet18.
+
+Applied robust evaluation strategies (cross-validation, classification metrics).
+
+Techniques to improve generalization and reduce overfitting.
+
+Added explainability for model predictions.
+
+Deployed an interactive Streamlit app for easy testing.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+📌 Notes for Recruiters
+
+The GitHub repo shows only the demo app code.
+
+The training pipeline, experiments, and deployment scripts are private but available upon request.
+
+This is one of several projects I’ve developed to demonstrate end-to-end AI engineering skills: from model training → evaluation → explainability → deployment.
 
 Features:
 1. Built a deep learning classifier for brain MRI scans using both custom CNNs and transfer learning techniques.

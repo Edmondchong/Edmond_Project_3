@@ -31,7 +31,8 @@ scikit-learn
 
 Matplotlib / Seaborn
 
-XAI Libraries (Grad-CAM, etc.)
+XAI
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ✨ Features
 
@@ -44,12 +45,13 @@ Techniques to improve generalization and reduce overfitting.
 Added explainability for model predictions.
 
 Deployed an interactive Streamlit app for easy testing.
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 📌 Notes for Recruiters
 
 The GitHub repo shows only the demo app code.
 
-The training pipeline, experiments, and deployment scripts are private but available upon request.
+The training pipeline, experiments, and deployment scripts are private but can be happily shared upon request.
 
 This is one of several projects I’ve developed to demonstrate end-to-end AI engineering skills: from model training → evaluation → explainability → deployment.
 

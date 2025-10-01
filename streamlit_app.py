@@ -55,7 +55,7 @@ uploaded_file = st.file_uploader("Upload a Brain MRI image", type=["jpg", "jpeg"
 if uploaded_file is not None:
     # Show uploaded image
     image = Image.open(uploaded_file).convert("RGB")
-    st.image(image, caption="Uploaded MRI Image", use_container_width=True)
+    st.image(image, caption="Uploaded MRI Image", use_column_width=True)
 
     if st.button("Predict Tumor Type"):
         # Preprocess

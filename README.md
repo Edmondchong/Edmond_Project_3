@@ -20,6 +20,7 @@ Custom CNN: Built a convolutional neural network from scratch to establish basel
 Transfer Learning with ResNet18: Leveraged pretrained features to improve accuracy and reduce training time.
 
 Explainable AI (XAI): Visualized salient regions of MRI scans to enhance interpretability and trust.
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ⚙️ Tech Stack
 

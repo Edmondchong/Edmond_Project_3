@@ -1,5 +1,7 @@
 
-### ⚠️ This repository contains a "DEMO" version only.  
+# 🚨 Edmond’s Project Demo 3
+
+⚠️ **Demo Version Only**  
 
 ### ⚠️The "Complete Project" — with full training pipelines (k-fold cross-validation, evaluation metrics & more) is KEPT PRIVATE to prevent unauthorized copying on the OPEN INTERNET.  
 
@@ -7,10 +9,12 @@
 
 ### 👉 Try the live demo here: https://edmondsproject3-rosebupmvbyfrwxz5u2dxk.streamlit.app/
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-📖 Project Overview
+📖 Project Overview: **🧠 Brain MRI Tumor Classifier**. 
 
 This project demonstrates how AI can support early tumor detection in medical imaging by classifying brain MRI scans into multiple tumor categories vs. non-tumor. It combines both deep learning and explainable AI techniques.
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 🔬 Key Approaches
 
 Custom CNN: Built a convolutional neural network from scratch to establish baseline performance.

@@ -131,11 +131,12 @@ if uploaded_file is not None:
                 st.write(f"Confidence: **{conf.item():.2f}**")
 
                 # ---- Grad-CAM ----
-                gradcam = GradCAM(model, model.base_model.layer4[1].conv2)  # last conv in ResNet18
+                gradcam = GradCAM(model, model.base_model.layer4[-1])  # last conv in ResNet18
                 img_tensor.requires_grad = True
                 heatmap = gradcam.generate(img_tensor, target_class=pred_class.item())
 
                 # Resize heatmap & overlay
+                heatmap = gradcam.generate(img_tensor, target_class=pred_class.item())
                 heatmap = cv2.resize(heatmap, (image.size[0], image.size[1]))
                 heatmap = np.uint8(255 * heatmap)
                 heatmap = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)
@@ -143,7 +144,11 @@ if uploaded_file is not None:
                 overlay = cv2.addWeighted(np.array(image.convert("RGB")), 0.6, heatmap, 0.4, 0)
 
                 st.subheader("Grad-CAM Heatmap")
-                st.image(overlay, caption="Model Explanation", use_column_width=True)
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.image(image, caption="Original MRI", use_column_width=True)
+                with col2:
+                    st.image(overlay, caption="Grad-CAM Heatmap", use_column_width=True)
 
     except Exception as e:
         st.error(f"Error processing image: {e}")

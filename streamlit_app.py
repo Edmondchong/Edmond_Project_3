@@ -124,7 +124,7 @@ if uploaded_file is not None:
                 probs = torch.softmax(outputs, dim=1)
                 conf, pred_class = torch.max(probs, 1)
 
-                classes = ["glioma", "meningioma", "pituitary", "no tumor"]
+                classes = ["glioma", "meningioma", "no tumor", "pituitary"]
 
                 st.subheader("Prediction Result")
                 st.write(f"Tumor Type: **{classes[pred_class.item()]}**")

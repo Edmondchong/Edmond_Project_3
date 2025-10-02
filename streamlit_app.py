@@ -113,7 +113,7 @@ uploaded_file = st.file_uploader("Upload a Brain MRI image", type=["jpg", "jpeg"
 if uploaded_file is not None:
     try:
         image = Image.open(uploaded_file)
-        st.image(image, caption="Uploaded MRI Image", use_column_width=True)
+        st.image(image, caption="Uploaded MRI Image", use_column_width=200)
 
         if st.button("Predict Tumor Type"):
             with st.spinner("Predicting... ⏳"):

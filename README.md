@@ -6,6 +6,9 @@
 ### 🤝 Full access can be HAPPILY shared 'Upon Recruiter Request' to showcase my Full-Stack AI & LLM skills.
 
 ### 👉 Try the live demo here: https://edmondsproject3-rosebupmvbyfrwxz5u2dxk.streamlit.app/
+
+🖼️ Example MRI images are available in the ./images_to_test_demo folder.  
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 📖 Project Overview: **🧠 Brain MRI Tumor Classifier**. 
 

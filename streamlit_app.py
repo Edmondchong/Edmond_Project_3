@@ -135,8 +135,14 @@ if uploaded_file is not None:
                 img_tensor.requires_grad = True
                 heatmap = gradcam.generate(img_tensor, target_class=pred_class.item())
 
-                # Resize heatmap & overlay
-                heatmap = gradcam.generate(img_tensor, target_class=pred_class.item())
+                # 🔹 Normalize heatmap properly
+                heatmap = np.maximum(heatmap, 0)
+                heatmap = heatmap / heatmap.max()
+                                
+                # 🔹 Invert values if important areas show up as blue
+                heatmap = 1 - heatmap  
+
+                # 🔹 Resize and apply colormap
                 heatmap = cv2.resize(heatmap, (image.size[0], image.size[1]))
                 heatmap = np.uint8(255 * heatmap)
                 heatmap = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)

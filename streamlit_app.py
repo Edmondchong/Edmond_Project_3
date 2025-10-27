@@ -10,6 +10,7 @@ import cv2
 
 
 st.title("🧠 Edmond Chong's Brain MRI Tumor Classifier")
+st.subheader("* Example MRI images are available on Github *")
 
 
 # -------------------------------

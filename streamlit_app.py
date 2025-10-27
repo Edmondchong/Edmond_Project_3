@@ -10,7 +10,7 @@ import cv2
 
 
 st.title("🧠 Edmond Chong's Brain MRI Tumor Classifier")
-st.markdown("_Example MRI images are available on GitHub._")
+st.markdown("#### Example MRI images are available on GitHub")
 
 # -------------------------------
 # Model definition

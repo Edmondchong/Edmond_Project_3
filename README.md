@@ -3,7 +3,7 @@
 
 ### ⚠️The "Complete Project" – with full training pipelines (k-fold, training & more) is KEPT PRIVATE to prevent unauthorized copying on the PUBLIC INTERNET.  
 
-### 🤝 Full access can be HAPPILY shared 'Upon Recruiter Request' to showcase my Full-Stack AI & LLM skills.
+### 🤝 Full access can be HAPPILY shared 'Upon Recruiter Request' to showcase my Full-Stack AI skills.
 
 ### 👉 Try the live demo here: https://edmondsproject3-rosebupmvbyfrwxz5u2dxk.streamlit.app/
 

@@ -1,11 +1,9 @@
 
-# Edmond Chong's Project 3 DEMO 
-
-### ⚠️The "Complete Project" – with full training pipelines (k-fold, training & more) is KEPT PRIVATE to prevent unauthorized copying on the PUBLIC INTERNET.  
-
-### 🤝 Full access can be HAPPILY shared 'Upon Recruiter Request' to showcase my Full-Stack AI skills.
+# Edmond Chong's Project 3
 
 ### 👉 Try the live demo here: https://edmondsproject3-rosebupmvbyfrwxz5u2dxk.streamlit.app/
+
+### 🤝Full project is private to prevent unauthorized copying, but I’m happy to share full access upon recruiter request.  
 
 🖼️ Example MRI images are available in the [Images_to_test_demo](./Images_to_test_demo) folder.  
 

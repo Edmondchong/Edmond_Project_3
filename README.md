@@ -5,7 +5,7 @@
 
 ### 🤝Full project is private to prevent unauthorized copying, but I’m happy to share full access upon recruiter request.  
 
-🖼️ Example Brain MRI images are available in the [Images_to_test_demo](./Images_to_test_demo) folder.  
+🖼️ Example Brain Tumor MRI images are available in the [Images_to_test_demo](./Images_to_test_demo) folder.  
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * The Streamlit demo may go idle after a period of inactivity — click “Yes, get this app back up” to restart it. Please note that it may take a short while to reload.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

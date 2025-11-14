@@ -5,7 +5,7 @@
 
 🖼️ Use this for testing demo >>> [Images_to_test_demo](./Images_to_test_demo)  
 
-### 🤝 Full project is private to prevent unauthorized copying, but I’m happy to share full access upon recruiter request.  
+### 🤝 Full project is private to prevent unauthorized copying, but Happy to share upon "Recruiter Request"  
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 *** The Streamlit demo may go idle after a period of inactivity — click “Yes, get this app back up” to restart it. Please note that it may take a short while to reload.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,9 +1,9 @@
 
 # Edmond Chong's Project 3
 
-### 👉 Try the live demo here: https://edmondsproject3-rosebupmvbyfrwxz5u2dxk.streamlit.app/
+### 👉 Try Demo: https://edmondsproject3-rosebupmvbyfrwxz5u2dxk.streamlit.app/
 
-### 🤝Full project is private to prevent unauthorized copying, but I’m happy to share full access upon recruiter request.  
+### 🤝 Full project is private to prevent unauthorized copying, but I’m happy to share full access upon recruiter request.  
 
 🖼️ Use this for testing demo >>> [Images_to_test_demo](./Images_to_test_demo) .  
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
